@@ -1,0 +1,281 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: 'vintage';
+    src: url(/font/vintage.ttf);
+}
+
+@font-face {
+    font-family: 'royal';
+    src: url(/font/Royalacid.ttf);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    position: fixed;
+    left: 60%;
+    top: 5px;
+}
+
+.burger {
+    display: none;
+}
+
+.lapis {
+    width: 40px;
+    height: 5px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+.lapis:nth-child(1) {
+    position: relative;
+    bottom: 5px;
+}
+
+.lapis:nth-child(3) {
+    position: relative;
+    top: 5px;
+}
+
+header>nav {
+    display: flex;
+    background-color: gray;
+    border-radius: 5px;
+}
+
+header>nav>ul {
+    display: flex;
+    list-style-type: none;
+}
+
+header>nav>ul>.nav {
+    margin: 0 5px;
+}
+
+header>nav>ul>li>.nav {
+    text-decoration: none;
+    color: white;
+    font-size: 21px;
+    font-weight: bold;
+    margin: 5px;
+    transition: .3s ease;
+}
+
+.nav:hover {
+    background-color: white;
+    color: gray;
+}
+
+.nav:active {
+    background-color: white;
+    color: gray;
+}
+
+.full {
+    width: 100%;
+    height: 100vh;
+    margin: 25px 0 25px 0;
+}
+
+.container-f {
+    background-color: #ff8c21;
+}
+
+.home {
+    border-radius: 0 0 300px 0;
+    background-color: rgb(255, 217, 135);
+    margin-top: 0;
+}
+
+.isi-ho {
+    font-size: 15px;
+    position: absolute;
+    top: 200px;
+}
+
+.isi-ho>h2 {
+    font-size: 75px;
+}
+
+.isi-ho::selection {
+    background-color: rgb(255, 217, 135);
+    color: black;
+}
+
+.isi-home {
+    width: 70%;
+    font-size: 20px;
+    overflow: auto;
+    margin: 10px;
+}
+
+.baccarat {
+    color: rgb(255, 255, 255);
+    background-image: url(/pic/blob.svg);
+    background-repeat: no-repeat;
+    background-size: 500px;
+    background-position: -200px;
+    background-origin: border-box;
+    transition: 1s ease-in-out;
+}
+
+.baccarat:hover {
+    background-position: -100px;
+    background-size: 600px;
+}
+
+.home>img {
+    position: absolute;
+    top: 250px;
+    left: 700px;
+    border-radius: 100px 100px 0 0;
+    filter: drop-shadow(10px 10px 5px);
+    animation: foto 2s ease-in-out;
+    transition: 1s;
+}
+
+@keyframes foto {
+    0% {
+        filter: opacity(0%);
+        left: 750px;
+    }
+
+    100% {
+        filter: opacity(100%);
+        left: 700px;
+    }
+}
+
+.pricing {
+    margin-top: 250px;
+    background: url(/pic/wave.svg);
+    background-color: #ff8c21;
+    background-repeat: space;
+    background-position: 0 10px;
+    box-shadow: 10px -50px 80px rgb(255, 255, 255);
+    border-radius: 0 250px 0 0;
+}
+
+.isi-pricing {
+    position: relative;
+    font-size: 30px;
+    top: 100px;
+    font-family: 'vintage';
+    margin-left: 75px;
+    color: white;
+    text-shadow: 10px 10px 10px brown;
+}
+
+.price {
+    position: relative;
+    top: 250px;
+    font-size: 60px;
+    font-family: 'royal';
+    color: white;
+    text-shadow: 0px 0px 20px red;
+    margin-left: 50px;
+}
+
+.price>span {
+    position: relative;
+    bottom: 45px;
+    font-size: 75px;
+    color: rgb(255, 45, 45);
+    text-shadow: none;
+    font-weight: bold;
+}
+
+.pricing>img {
+    position: relative;
+    top: 50px;
+    left: 650px;
+    width: 250px;
+    transform: rotate(10deg);
+    filter: drop-shadow(10px 10px 30px rgb(168, 255, 243))
+}
+
+.shoplist {
+    margin-top: 100px;
+    display: grid;
+    justify-content: center;
+}
+
+.isi-shop {
+    font-family: 'vintage';
+    font-size: 50px;
+    color: white;
+    text-shadow: 20px 10px 30px white;
+    cursor: text;
+}
+
+.shoplist>ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+.shoplist>ul>li {
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    filter: saturate(0%);
+    transition: .3s;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.shoplist>ul>li:hover {
+    filter: saturate(100%);
+    box-shadow: 0px 0px 30px rgb(255, 255, 255);
+}
+
+.shoplist>ul>li:nth-child(1) {
+    background: url(/pic/tokopedia.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.shoplist>ul>li:nth-child(2) {
+    background: url(/pic/shopee.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.shoplist>ul>li:nth-child(3) {
+    background: url(/pic/amazon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.about {
+    background-color: rgb(56, 56, 56);
+    color: white;
+    width: 100%;
+    height: 60vh;
+    display: grid;
+    justify-content: space;
+    align-items: center;
+    text-align: center;
+}
+
+.copyright {
+    color: gray;
+    position: relative;
+    top: 80px;
+}
+
+@media screen and (max-width: 720px) {
+    .full {
+        margin: 10px 0 10px 0;
+    }
+}
