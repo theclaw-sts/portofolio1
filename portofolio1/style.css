@@ -24,6 +24,7 @@ header {
     position: fixed;
     left: 60%;
     top: 5px;
+    z-index: 1;
 }
 
 .burger {
@@ -275,7 +276,255 @@ header>nav>ul>li>.nav {
 }
 
 @media screen and (max-width: 720px) {
+
+    header {
+        left: 0;
+        top: 30px;
+    }
+
     .full {
         margin: 10px 0 10px 0;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .burger {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        left: 10px;
+        cursor: pointer;
+        z-index: 2;
+        overflow: hidden;
+        width: 40px;
+        height: 30px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .burger.active {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        left: 10px;
+        cursor: pointer;
+        z-index: 2;
+        overflow: hidden;
+        width: 40px;
+        height: 30px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .lapis1, .lapis2, .lapis3 {
+        width: 40px;
+        height: 5px;
+        background-color: white;
+        border-radius: 2px;
+    }
+    
+    .lapis1 {
+        position: relative;
+        bottom: 5px;
+    }
+    
+    .lapis3 {
+        position: relative;
+        top: 5px;
+    }
+
+    .active {
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(121, 121, 121, 0.8);
+        top: 0;
+        z-index: 1;
+        transition: ease .3s;
+    }
+
+    .active>ul {
+        width: 100%;
+        height: 200px;
+        display: grid;
+    }
+
+    .home {
+        border-radius: 0 0 50px 0;
+        background-color: rgb(255, 217, 135);
+        margin-top: 0;
+    }
+    
+    .isi-ho {
+        font-size: 15px;
+        position: relative;
+        top: 100px;
+    }
+    
+    .isi-ho>h2 {
+        font-size: 50px;
+    }
+    
+    .isi-ho::selection {
+        background-color: rgb(255, 217, 135);
+        color: black;
+    }
+    
+    .isi-home {
+        width: 70%;
+        font-size: 15px;
+        overflow: auto;
+        margin: 10px;
+    }
+    
+    .baccarat {
+        color: rgb(255, 255, 255);
+        background-image: url(/pic/blob.svg);
+        background-repeat: no-repeat;
+        background-size: 150px;
+        background-position: 0px;
+        background-origin: border-box;
+        transition: 1s ease-in-out;
+    }
+    
+    .baccarat:hover {
+        background-position: 70px;
+        background-size: 200px;
+    }
+    
+    .home>img {
+        position: absolute;
+        top: 420px;
+        left: 100px;
+        border-radius: 100px 100px 0 0;
+        filter: drop-shadow(10px 10px 5px);
+        animation: foto 2s ease-in-out;
+        transition: 1s;
+        width: 100px;
+    }
+
+    .pricing {
+        margin-top: 100px;
+        background: url(/pic/wave.svg);
+        background-color: #ff8c21;
+        background-repeat: space;
+        background-position: 0 10px;
+        box-shadow: 10px -10px 80px rgb(255, 255, 255);
+        border-radius: 0 75px 0 0;
+    }
+    
+    .isi-pricing {
+        position: relative;
+        font-size: 25px;
+        top: 100px;
+        font-family: 'vintage';
+        margin-left: 10px;
+        color: white;
+        text-shadow: 5px 5px 2px brown;
+    }
+    
+    .price {
+        position: relative;
+        top: 150px;
+        font-size: 35px;
+        font-family: 'royal';
+        color: white;
+        text-shadow: 0px 0px 10px red;
+        margin-left: 10px;
+    }
+    
+    .price>span {
+        position: relative;
+        bottom: 20px;
+        font-size: 40px;
+        color: rgb(255, 45, 45);
+        text-shadow: none;
+        font-weight: bold;
+    }
+    
+    .pricing>img {
+        position: relative;
+        top: 130px;
+        left: 0px;
+        width: 250px;
+        transform: rotate(10deg);
+        filter: drop-shadow(10px 10px 30px rgb(168, 255, 243))
+    }
+    
+    .shoplist {
+        margin-top: 50px;
+        display: grid;
+        justify-content: center;
+    }
+    
+    .isi-shop {
+        font-family: 'vintage';
+        font-size: 20px;
+        color: white;
+        text-shadow: 20px 10px 30px white;
+        cursor: text;
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    .shoplist>ul {
+        display: flex;
+        justify-content: space-around;
+        list-style-type: none;
+    }
+    
+    .shoplist>ul>li {
+        width: 50px;
+        height: 50px;
+        background-color: aqua;
+        filter: saturate(0%);
+        transition: .3s;
+        border-radius: 100%;
+        cursor: pointer;
+    }
+    
+    .shoplist>ul>li:hover {
+        filter: saturate(100%);
+        box-shadow: 0px 0px 30px rgb(255, 255, 255);
+    }
+    
+    .shoplist>ul>li:nth-child(1) {
+        background: url(/pic/tokopedia.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .shoplist>ul>li:nth-child(2) {
+        background: url(/pic/shopee.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .shoplist>ul>li:nth-child(3) {
+        background: url(/pic/amazon.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .about {
+        background-color: rgb(56, 56, 56);
+        color: white;
+        width: 100%;
+        height: 60vh;
+        display: grid;
+        justify-content: space;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .copyright {
+        color: gray;
+        position: relative;
+        top: 80px;
     }
 }
